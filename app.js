@@ -62,8 +62,8 @@ app.get('/ssh/host/:host?', function (req, res, next) {
 			}) &&
 			req.query.readyTimeout) || config.ssh.readyTimeout
 	}
-	req.session.username = req.query.uname
-	req.session.userpassword = req.query.pass
+	req.session.username = req.query.uname;
+	req.session.userpassword = req.query.serverId;
 	req.session.ssh.header.name && validator.escape(req.session.ssh.header.name)
 	req.session.ssh.header.background &&
 		validator.escape(req.session.ssh.header.background)
